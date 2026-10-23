@@ -1,16 +1,27 @@
-# React + Vite
+# GradeBook — Client
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React frontend of the GradeBook education platform. The API lives in [gradebook-server](https://github.com/ElvinBaxsh/gradebook-server).
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Login and registration, JWT stored in a Zustand auth store, protected routes
+- **Dashboard:** grade summary, attendance chart, achievements, upcoming tests
+- **Schedule:** calendar with day and week views (FullCalendar)
+- **Tasks:** task list and assignment submission modal
+- **Library** and **Videos** for learning materials
+- Profile settings
+- Sidebar layout, responsive design
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+React · Vite · React Router · Zustand · Axios · Tailwind CSS · FullCalendar · react-circular-progressbar · Lucide icons
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev     # http://localhost:5173
+npm run build
+```
+
+The backend should run on `http://localhost:5000` (see [gradebook-server](https://github.com/ElvinBaxsh/gradebook-server)).
